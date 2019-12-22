@@ -2338,6 +2338,7 @@
 #include "code\modules\modular_computers\file_system\programs\generic\reports.dm"
 #include "code\modules\modular_computers\file_system\programs\generic\scanner.dm"
 #include "code\modules\modular_computers\file_system\programs\generic\stockmarket.dm"
+#include "code\modules\modular_computers\file_system\programs\generic\supply2.dm"
 #include "code\modules\modular_computers\file_system\programs\generic\wordprocessor.dm"
 #include "code\modules\modular_computers\file_system\programs\medical\clone_manager.dm"
 #include "code\modules\modular_computers\file_system\programs\medical\suit_sensors.dm"

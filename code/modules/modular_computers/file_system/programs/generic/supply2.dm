@@ -6,7 +6,7 @@
 	program_menu_icon = "cart"
 	extended_desc = "A management tool that allows for ordering of various supplies through the facility's cargo system. Some features may require additional access."
 	size = 21
-	available_on_ntnet = TRUE
+	available_on_ntnet = FALSE
 	requires_ntnet = TRUE
 
 /datum/computer_file/program/supply/process_tick()
@@ -373,9 +373,7 @@
 		if(!R) return 0
 		var/expense_limit = 0
 		var/datum/assignment/assignment = connected_faction.get_assignment(R.assignment_uid, R.get_name())
-		if()
-
-		else if(assignment)
+		if(assignment)
 			var/datum/accesses/expenses = assignment.accesses[R.rank]
 			if(expenses)
 				expense_limit = expenses.expense_limit
