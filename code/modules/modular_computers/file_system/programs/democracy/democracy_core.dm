@@ -20,7 +20,7 @@
 	program_menu_icon = "flag"
 	nanomodule_path = /datum/nano_module/program/democracy_core
 	extended_desc = "Used by the Executive Branch to manage the government."
-	required_access = core_access_leader
+	required_access = core_access_reassignment
 	requires_ntnet = 1
 	size = 65
 	usage_flags = PROGRAM_CONSOLE | PROGRAM_LAPTOP | PROGRAM_TELESCREEN
@@ -528,8 +528,8 @@
 				copy.pay = new_pay
 			else
 				selected_assignment.accesses |= new /datum/accesses()
-		
-		
+
+
 		if("change_auth_level")
 			var/datum/accesses/copy = selected_assignment.accesses[selected_rank]
 			if(istype(copy))
@@ -538,7 +538,7 @@
 				copy.auth_level = new_pay
 			else
 				selected_assignment.accesses |= new /datum/accesses()
-		
+
 		if("change_auth_req")
 			var/datum/accesses/copy = selected_assignment.accesses[selected_rank]
 			if(istype(copy))
@@ -548,7 +548,7 @@
 			else
 				selected_assignment.accesses |= new /datum/accesses()
 
-		
+
 		if("edit_rank_title")
 			var/datum/accesses/copy = selected_assignment.accesses[selected_rank]
 			if(istype(copy))
@@ -677,7 +677,7 @@
 				copy.expense_limit = new_pay
 			else
 				selected_assignment.accesses[selected_rank] = new /datum/accesses()
-		
+
 		if("print_expense")
 			if(connected_faction.last_expense_print > world.realtime)
 				to_chat(usr, "Your  print was rejected. You have printed an expense card in the last 3 minutes.")

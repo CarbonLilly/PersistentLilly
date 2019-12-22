@@ -8,6 +8,7 @@
 	requires_ntnet = TRUE
 	size = 12
 	democratic = 1
+	required_access = core_access_reassignment
 	category = PROG_GOVERNMENT
 	usage_flags = PROGRAM_CONSOLE | PROGRAM_LAPTOP | PROGRAM_TELESCREEN
 
@@ -71,7 +72,7 @@
 	if(program.computer.network_card && program.computer.network_card.connected_network)
 		connected_faction = program.computer.network_card.connected_network.holder
 	var/list/data = host.initial_data()
-	if(connected_faction.is_councillor(user.real_name))
+	if(TRUE)
 		data["is_councillor"] = 1
 		data["menu"] = menu
 		if(menu == 1)

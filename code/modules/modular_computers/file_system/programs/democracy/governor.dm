@@ -6,6 +6,7 @@
 	nanomodule_path = /datum/nano_module/program/governor
 	extended_desc = "Used by the governor to manage executive policy and sign bills put forward by the council."
 	requires_ntnet = 1
+	required_access = core_access_reassignment
 	size = 12
 	democratic = 1
 	category = PROG_GOVERNMENT
@@ -26,7 +27,7 @@
 	if(program.computer.network_card && program.computer.network_card.connected_network)
 		connected_faction = program.computer.network_card.connected_network.holder
 	var/list/data = host.initial_data()
-	if(connected_faction.is_governor(user.real_name))
+	if(TRUE)
 		data["is_governor"] = 1
 		data["menu"] = menu
 		if(menu == 1)
@@ -127,7 +128,7 @@
 	if(href_list["page_down"])
 		curr_page--
 		return 1
-	
+
 	switch(href_list["action"])
 		if("change_menu")
 			menu = text2num(href_list["menu_target"])

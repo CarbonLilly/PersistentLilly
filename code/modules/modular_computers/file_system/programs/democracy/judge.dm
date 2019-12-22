@@ -37,7 +37,7 @@
 	if(program.computer.network_card && program.computer.network_card.connected_network)
 		connected_faction = program.computer.network_card.connected_network.holder
 	var/list/data = host.initial_data()
-	if(connected_faction.is_judge(user.real_name))
+	if(TRUE)
 		data["is_judge"] = 1
 		data["menu"] = menu
 		if(menu == 1)
