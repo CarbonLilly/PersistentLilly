@@ -63,9 +63,9 @@ FIELD_LONG("Exploitable Information", antagRecord, access_syndicate, access_synd
 	var/shuttle_limit = 0
 	var/cost = 0
 
-	
+
 /datum/personal_limits/one
-	stock_limit = 125
+	stock_limit = 5000
 
 /datum/personal_limits/two
 	stock_limit = 175
@@ -73,12 +73,12 @@ FIELD_LONG("Exploitable Information", antagRecord, access_syndicate, access_synd
 	cost = 3000
 
 /datum/personal_limits/three
-	stock_limit = 225
+	stock_limit = 5000
 	shuttle_limit = 2
 	cost = 6500
 
 /datum/personal_limits/four
-	stock_limit = 275
+	stock_limit = 5000
 	shuttle_limit = 3
 	cost = 10000
 
@@ -174,8 +174,8 @@ FIELD_LONG("Exploitable Information", antagRecord, access_syndicate, access_synd
 		else
 			var/datum/personal_limits/limit = new /datum/personal_limits/one()
 			return limit.shuttle_limit
-			
-			
+
+
 /datum/computer_file/report/crew_record/proc/get_upgrade_cost()
 	switch(network_level)
 		if(1)
@@ -219,7 +219,7 @@ FIELD_LONG("Exploitable Information", antagRecord, access_syndicate, access_synd
 	var/worked = 0
 	var/expenses = 0
 	var/datum/computer_file/data/email_account/email
-	var/citizenship = RESIDENT 
+	var/citizenship = RESIDENT
 	var/ckey
 
 
@@ -228,13 +228,13 @@ FIELD_LONG("Exploitable Information", antagRecord, access_syndicate, access_synd
 	var/list/subscribed_orgs = list()
 	var/list/shuttles = list()
 	var/last_health_alarm = 0
-	
+
 	var/visibility_status = 1 // whether or not to show online to social groups and friends
-	
+
 	var/list/all_friends = list() // just a list of real_names
-	
+
 	var/list/pending_friend_request = list() // list of people trying to become friends
-	
+
 /datum/computer_file/report/crew_record/New()
 	..()
 	for(var/T in subtypesof(/datum/report_field/))
@@ -421,7 +421,7 @@ FIELD_LONG("Exploitable Information", antagRecord, access_syndicate, access_synd
 	set_status(GLOB.default_physical_status)
 	set_species(card.species)
 	set_citizenship(GLOB.default_citizenship)
-	
+
 	// Medical record
 	set_bloodtype(card.blood_type)
 	set_medRecord("No record supplied")
