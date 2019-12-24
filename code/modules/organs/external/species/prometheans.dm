@@ -1,7 +1,7 @@
 // Slime limbs.
 /obj/item/organ/external/chest/unbreakable/slime
 	max_health = 100
-	limb_flags = ORGAN_FLAG_GENDERED_ICO
+	limb_flags = ORGAN_FLAG_GENDERED_ICON
 
 /obj/item/organ/external/groin/unbreakable/slime
 	max_health = 50
