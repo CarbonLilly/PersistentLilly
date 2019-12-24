@@ -17,6 +17,22 @@
 	meat_type = /material/phoron
 	hud_type = /datum/hud_data/phorosian //This hud disables the hunger indicator
 
+	available_cultural_info = list(
+		TAG_CULTURE = list(
+			CULTURE_HUMAN_EARTH_POOR,
+			CULTURE_HUMAN_EARTH_MIDDLE,
+			CULTURE_HUMAN_EARTH_HIGH,
+			CULTURE_HUMAN_AGARTHA_POOR,
+			CULTURE_HUMAN_AGARTHA_MIDDLE,
+			CULTURE_HUMAN_COLONY
+		),
+		TAG_AMBITION = list(
+			AMBITION_FREEDOM,
+			AMBITION_OPPORTUNITY,
+			AMBITION_KNOWLEDGE
+		)
+	)
+
 	virus_immune = 1
 	breath_type = GAS_PHORON
 	poison_types = list(GAS_OXYGEN = TRUE) //Getting oxygen into your lungs HURTS
